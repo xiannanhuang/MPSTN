@@ -4,7 +4,7 @@ Main insight for the paper is folding 1-d time-serise data as matrix according t
 
 ## Train
 ### Train Model for Each Station
-python cnn2_mian.py
+python cnn_mian.py
 
 ### Train Model for the Whole Subway System
 python cnn_gnn2.py
