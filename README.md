@@ -11,4 +11,4 @@ python cnn_gnn2.py
 
 ## Requirements
 python 3.7 <br />
-torch  1.13.0
+torch  1.13.0+cu117
