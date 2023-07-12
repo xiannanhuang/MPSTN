@@ -8,9 +8,9 @@ import logging
 from datetime import datetime
 from torch.optim.lr_scheduler import StepLR
 
-dataset = Dataset.Dataset_as_cv2(np.load('sh_data.npy')[:62, :, :, :],14)
-validdataset = Dataset.Dataset_as_cv2(np.load('sh_data.npy')[48:69 ,:,:, :],14)
-testdataset = Dataset.Dataset_as_cv2(np.load('sh_data.npy')[55:,:,:, :],14)
+dataset = Dataset.Dataset_as_cv2(np.load('data\\sh_data.npy')[:62, :, :, :],14)
+validdataset = Dataset.Dataset_as_cv2(np.load('data\\sh_data.npy')[48:69 ,:,:, :],14)
+testdataset = Dataset.Dataset_as_cv2(np.load('data\\sh_data.npy')[55:,:,:, :],14)
 device = torch.device('cuda')
 
 batch_size = 2048
