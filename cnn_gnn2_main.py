@@ -99,7 +99,7 @@ for epoch in range(num_epochs):
         print(log_msg)
         logging.info(f"{timestamp} - {log_msg}")
         if avg_val_loss.sum() < best_valid_loss:
-            best_test_loss = avg_test_loss.sum()
+            best_val_loss = avg_val_loss.sum()
             best_model_name = f"model\\cnn_gnn_best_model_{datetime.now().strftime('%Y%m%d%H%M%S')}.pth"
             torch.save(model.state_dict(), best_model_name)
             logging.info(f"Saved best model: {best_model_name}")
