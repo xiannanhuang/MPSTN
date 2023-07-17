@@ -42,7 +42,7 @@ logging.info(f"Total Trainable Parameters: {total_trainable_params}")
 # Record the current values of various parameters
 logging.info(f"num_epochs: {num_epochs}")
 logging.info(f"learning rate: {optimizer.param_groups[0]['lr']}")
-best_valid_loss = float('inf')  # Initialize the minimum test loss as infinity
+best_valid_loss = float('inf')  # Initialize the minimum valid loss as infinity
 for epoch in range(num_epochs):
     epoch_start_time=datetime.now()
     model.train()
