@@ -9,8 +9,8 @@ from datetime import datetime
 from torch.optim.lr_scheduler import StepLR
 
 
-dataset = Dataset.Dataset_stations_all(np.load('sh_data.npy')[:62, :, :, :],np.load('weather.npy')[:62])
-validdataset = Dataset.Dataset_stations_all(np.load('sh_data.npy')[48:69 ,:,:, :],np.load('weather.npy')[48:69])
+dataset = Dataset.Dataset_stations_all(np.load('data\\sh_data.npy')[:62, :, :, :],np.load('data\\weather.npy')[:62])
+validdataset = Dataset.Dataset_stations_all(np.load('data\\sh_data.npy')[48:69 ,:,:, :],np.load('data\\weather.npy')[48:69])
 
 device = torch.device('cuda')
 batch_size = 8
@@ -30,7 +30,7 @@ num_epochs = 200
 
 timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 logging.info(f'{timestamp} -' + 'train start for model cnn_trans_stations')
-adj_matrix3=torch.tensor(np.load('graph_sh_conn.pkl',allow_pickle=True),dtype=torch.float32).to(device)
+adj_matrix3=torch.tensor(np.load('data\\graph_sh_conn.pkl',allow_pickle=True),dtype=torch.float32).to(device)
 # Record the names and shapes of the network's parameters
 for name, param in model.named_parameters():
     logging.info(f"Parameter Name: {name}\t Shape: {param.shape}")
