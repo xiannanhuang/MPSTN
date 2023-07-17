@@ -104,12 +104,5 @@ for epoch in range(num_epochs):
             torch.save(model.state_dict(), best_model_name)
             logging.info(f"Saved best model: {best_model_name}")
     scheduler.step()
-# Generate a model name with the current time
-model_name = f"model_{datetime.now().strftime('%Y%m%d%H%M%S')}.pth"
 
-# Save the model
-torch.save(model.state_dict(), model_name)
-
-# Print the stored model name
-logging.info(f"Saved final model: {model_name}")
 
