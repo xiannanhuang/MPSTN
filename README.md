@@ -6,7 +6,10 @@ Accurate short-term prediction of passenger flow in subway stations plays a vita
 
 ## Train
 
-python cnn_gnn2.py
+python cnn_gnn2_mian.py
+
+## Test
+python test.py
 
 ## Requirements
 python 3.7 <br />
